@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CMath">
+      <UniqueIdentifier>{dc9473e7-7474-4bc3-aed6-dfcece845f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{66604a59-fd1b-44db-acca-5861325ce15f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGeo">
+      <UniqueIdentifier>{dee9a962-2a38-4078-a0da-c47fde0de60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CDebug">
+      <UniqueIdentifier>{555478f9-ee97-4045-b467-209a073ce4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\HLSL">
+      <UniqueIdentifier>{f9c509ea-bffb-491e-bab4-079666c03dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\HLSL\Custom">
+      <UniqueIdentifier>{79782858-dcbb-4fbf-9cad-e0c4e4394351}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Creative.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Creative.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\CCore\framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCore\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCore\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMathCore.h">
+      <Filter>CMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCore\Creative.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirectXCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CVertex.h">
+      <Filter>Core\CGeo</Filter>
+    </ClInclude>
+    <ClInclude Include="CStaticMesh.h">
+      <Filter>Core\CGeo</Filter>
+    </ClInclude>
+    <ClInclude Include="CMathGeometry.h">
+      <Filter>CMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCore\CreativeMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CException.h">
+      <Filter>Core\CDebug</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CMathCore.cpp">
+      <Filter>CMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCore\Creative.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectXCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CVertex.cpp">
+      <Filter>Core\CGeo</Filter>
+    </ClCompile>
+    <ClCompile Include="CStaticMesh.cpp">
+      <Filter>Core\CGeo</Filter>
+    </ClCompile>
+    <ClCompile Include="CMathGeometry.cpp">
+      <Filter>CMath</Filter>
+    </ClCompile>
+    <ClCompile Include="CException.cpp">
+      <Filter>Core\CDebug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
