@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.props" Condition="Exists('..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.props')" />
   <Import Project="..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -123,7 +124,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d11.lib;d3d12.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;d3d12.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,38 +152,72 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CDirectXCore.h" />
-    <ClInclude Include="CException.h" />
-    <ClInclude Include="CMathCore.h" />
-    <ClInclude Include="CMathGeometry.h" />
-    <ClInclude Include="CObject.h" />
-    <ClInclude Include="CStaticMesh.h" />
-    <ClInclude Include="CVertex.h" />
-    <ClInclude Include="Source\CCore\Creative.h" />
-    <ClInclude Include="Source\CCore\CreativeMacros.h" />
-    <ClInclude Include="Source\CCore\framework.h" />
-    <ClInclude Include="Source\CCore\Resource.h" />
-    <ClInclude Include="Source\CCore\targetver.h" />
+    <ClInclude Include="Source\CBasicCamera.h" />
+    <ClInclude Include="Source\CCameraCore.h" />
+    <ClInclude Include="Source\CCheckFeatures.h" />
+    <ClInclude Include="Source\CConstantBuffer.h" />
+    <ClInclude Include="Source\CDescriptorHeap.h" />
+    <ClInclude Include="Source\CDirectXCore.h" />
+    <ClInclude Include="Source\CException.h" />
+    <ClInclude Include="Source\CGPUResource.h" />
+    <ClInclude Include="Source\CGraphicsBase.h" />
+    <ClInclude Include="Source\CMathCore.h" />
+    <ClInclude Include="Source\CMathGeometry.h" />
+    <ClInclude Include="Source\CObject.h" />
+    <ClInclude Include="Source\Creative.h" />
+    <ClInclude Include="Source\CreativeGraphicsUtilities.h" />
+    <ClInclude Include="Source\CreativeMacros.h" />
+    <ClInclude Include="Source\CResourceDescriptorDelegate.h" />
+    <ClInclude Include="Source\CRPDescriptorHeap.h" />
+    <ClInclude Include="Source\CStageDescriptorHeap.h" />
+    <ClInclude Include="Source\CStaticMesh.h" />
+    <ClInclude Include="Source\CThread.h" />
+    <ClInclude Include="Source\CThreadPool.h" />
+    <ClInclude Include="Source\CVertex.h" />
+    <ClInclude Include="Source\CVertexBuffer.h" />
+    <ClInclude Include="Source\framework.h" />
+    <ClInclude Include="Source\Resource.h" />
+    <ClInclude Include="Source\targetver.h" />
+    <ClInclude Include="Source\ThreadPoolBase.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CDirectXCore.cpp" />
-    <ClCompile Include="CException.cpp" />
-    <ClCompile Include="CMathCore.cpp" />
-    <ClCompile Include="CMathGeometry.cpp" />
-    <ClCompile Include="CObject.cpp" />
-    <ClCompile Include="CStaticMesh.cpp" />
-    <ClCompile Include="CVertex.cpp" />
-    <ClCompile Include="Source\CCore\Creative.cpp" />
+    <ClCompile Include="Source\CBasicCamera.cpp" />
+    <ClCompile Include="Source\CCameraCore.cpp" />
+    <ClCompile Include="Source\CCheckFeatures.cpp" />
+    <ClCompile Include="Source\CConstantBuffer.cpp" />
+    <ClCompile Include="Source\CDescriptorHeap.cpp" />
+    <ClCompile Include="Source\CDirectXCore.cpp" />
+    <ClCompile Include="Source\CException.cpp" />
+    <ClCompile Include="Source\CGPUResource.cpp" />
+    <ClCompile Include="Source\CGraphicsBase.cpp" />
+    <ClCompile Include="Source\CMathCore.cpp" />
+    <ClCompile Include="Source\CMathGeometry.cpp" />
+    <ClCompile Include="Source\CObject.cpp" />
+    <ClCompile Include="Source\Creative.cpp" />
+    <ClCompile Include="Source\CreativeGraphicsUtilities.cpp" />
+    <ClCompile Include="Source\CResourceDescriptorDelegate.cpp" />
+    <ClCompile Include="Source\CRPDescriptorHeap.cpp" />
+    <ClCompile Include="Source\CStageDescriptorHeap.cpp" />
+    <ClCompile Include="Source\CStaticMesh.cpp" />
+    <ClCompile Include="Source\CThread.cpp" />
+    <ClCompile Include="Source\CThreadPool.cpp" />
+    <ClCompile Include="Source\CVertex.cpp" />
+    <ClCompile Include="Source\CVertexBuffer.cpp" />
+    <ClCompile Include="Source\ThreadPoolBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.targets" Condition="Exists('..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.targets')" />
+  </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.2\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Direct3D.D3D12.1.4.10\build\native\Microsoft.Direct3D.D3D12.targets'))" />
   </Target>
 </Project>

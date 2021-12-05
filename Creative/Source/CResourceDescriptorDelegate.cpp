@@ -1,0 +1,1 @@
+#include "CResourceDescriptorDelegate.h"

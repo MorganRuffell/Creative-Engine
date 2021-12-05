@@ -31,6 +31,42 @@
     <Filter Include="Resource Files\HLSL\Custom">
       <UniqueIdentifier>{79782858-dcbb-4fbf-9cad-e0c4e4394351}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\CGraphics">
+      <UniqueIdentifier>{2220921b-f510-4123-b41a-b32c41260030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\GraphicsResources">
+      <UniqueIdentifier>{b6b5cd66-eed1-499b-b162-e4944c03f729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\GraphicsResources\GraphicsBuffers">
+      <UniqueIdentifier>{deb71c70-31ce-45fb-a642-118946467867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CCameras">
+      <UniqueIdentifier>{043b8da8-9854-489f-b5b5-004c7a00ddfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CInput">
+      <UniqueIdentifier>{2fa0e360-c26a-4c21-b353-5394ba0df7aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\GraphicsResources\DescriptorHeaps">
+      <UniqueIdentifier>{0d4067e2-cf59-4369-a576-fb2f3c1811be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CConcurrency">
+      <UniqueIdentifier>{a6c9332e-98bc-4fb3-9b11-3ef66317436b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\Graphics Base Classes">
+      <UniqueIdentifier>{da5bade0-54ad-404e-bf78-2c4ba6206713}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CConcurrency\ThreadPools">
+      <UniqueIdentifier>{f5b35b2c-bcc0-4849-8efa-cc810c5ac68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CConcurrency\Threads">
+      <UniqueIdentifier>{18268699-13ea-4ad0-b6bf-4670d218c673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\GraphicsHelpers">
+      <UniqueIdentifier>{98606e13-af6b-4d3e-87e0-a7bf3aed259e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\CGraphics\FeatureSupport">
+      <UniqueIdentifier>{b3e4b1fb-76c8-4fbe-93b0-dc076387bcfe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Creative.rc">
@@ -46,67 +82,157 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\CCore\framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CCore\Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CCore\targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CMathCore.h">
+    <ClInclude Include="Source\CMathCore.h">
       <Filter>CMath</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CCore\Creative.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="CDirectXCore.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="CObject.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="CVertex.h">
-      <Filter>Core\CGeo</Filter>
-    </ClInclude>
-    <ClInclude Include="CStaticMesh.h">
-      <Filter>Core\CGeo</Filter>
-    </ClInclude>
-    <ClInclude Include="CMathGeometry.h">
+    <ClInclude Include="Source\CMathGeometry.h">
       <Filter>CMath</Filter>
     </ClInclude>
-    <ClInclude Include="Source\CCore\CreativeMacros.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CException.h">
+    <ClInclude Include="Source\CException.h">
       <Filter>Core\CDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CDirectXCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CObject.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Creative.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CreativeMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CStaticMesh.h">
+      <Filter>Core\CGeo</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CVertex.h">
+      <Filter>Core\CGeo</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CConstantBuffer.h">
+      <Filter>Core\CGraphics\GraphicsResources\GraphicsBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CVertexBuffer.h">
+      <Filter>Core\CGraphics\GraphicsResources\GraphicsBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CBasicCamera.h">
+      <Filter>Core\CCameras</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCameraCore.h">
+      <Filter>Core\CCameras</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CDescriptorHeap.h">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CResourceDescriptorDelegate.h">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CGPUResource.h">
+      <Filter>Core\CGraphics\Graphics Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CGraphicsBase.h">
+      <Filter>Core\CGraphics\Graphics Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CThreadPool.h">
+      <Filter>Core\CConcurrency\ThreadPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ThreadPoolBase.h">
+      <Filter>Core\CConcurrency\ThreadPools</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CThread.h">
+      <Filter>Core\CConcurrency\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CStageDescriptorHeap.h">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CRPDescriptorHeap.h">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CreativeGraphicsUtilities.h">
+      <Filter>Core\CGraphics\GraphicsHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCheckFeatures.h">
+      <Filter>Core\CGraphics\FeatureSupport</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CMathCore.cpp">
+    <ClCompile Include="Source\CMathCore.cpp">
       <Filter>CMath</Filter>
     </ClCompile>
-    <ClCompile Include="Source\CCore\Creative.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="CDirectXCore.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="CObject.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="CVertex.cpp">
-      <Filter>Core\CGeo</Filter>
-    </ClCompile>
-    <ClCompile Include="CStaticMesh.cpp">
-      <Filter>Core\CGeo</Filter>
-    </ClCompile>
-    <ClCompile Include="CMathGeometry.cpp">
+    <ClCompile Include="Source\CMathGeometry.cpp">
       <Filter>CMath</Filter>
     </ClCompile>
-    <ClCompile Include="CException.cpp">
+    <ClCompile Include="Source\CException.cpp">
       <Filter>Core\CDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CDirectXCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CObject.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Creative.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CStaticMesh.cpp">
+      <Filter>Core\CGeo</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CVertex.cpp">
+      <Filter>Core\CGeo</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CConstantBuffer.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\GraphicsBuffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CVertexBuffer.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\GraphicsBuffers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CBasicCamera.cpp">
+      <Filter>Core\CCameras</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCameraCore.cpp">
+      <Filter>Core\CCameras</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CDescriptorHeap.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CResourceDescriptorDelegate.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CGPUResource.cpp">
+      <Filter>Core\CGraphics\Graphics Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CGraphicsBase.cpp">
+      <Filter>Core\CGraphics\Graphics Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CThreadPool.cpp">
+      <Filter>Core\CConcurrency\ThreadPools</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ThreadPoolBase.cpp">
+      <Filter>Core\CConcurrency\ThreadPools</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CThread.cpp">
+      <Filter>Core\CConcurrency\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CStageDescriptorHeap.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CRPDescriptorHeap.cpp">
+      <Filter>Core\CGraphics\GraphicsResources\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CreativeGraphicsUtilities.cpp">
+      <Filter>Core\CGraphics\GraphicsHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCheckFeatures.cpp">
+      <Filter>Core\CGraphics\FeatureSupport</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
