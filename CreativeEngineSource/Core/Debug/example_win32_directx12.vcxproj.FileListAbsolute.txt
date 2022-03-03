@@ -1,0 +1,6 @@
+C:\Users\Morgan\Desktop\NewCreative\Creative-Engine-Private\examples\Core\Debug\Creative Engine V0.1.exe
+C:\Users\1804824.UCREATIVE\Desktop\Creative-Engine-Private\CreativeEngineSource\Core\Debug\D3D12\D3D12Core.dll
+C:\Users\1804824.UCREATIVE\Desktop\Creative-Engine-Private\CreativeEngineSource\Core\Debug\D3D12\D3D12SDKLayers.dll
+C:\Users\1804824.UCREATIVE\Desktop\Creative-Engine-Private\CreativeEngineSource\Core\Debug\D3D12\D3D12Core.pdb
+C:\Users\1804824.UCREATIVE\Desktop\Creative-Engine-Private\CreativeEngineSource\Core\Debug\D3D12\D3D12SDKLayers.pdb
+C:\Users\1804824.UCREATIVE\Desktop\Creative-Engine-Private\CreativeEngineSource\Core\Debug\Creative Engine V0.1.exe
