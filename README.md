@@ -8,6 +8,7 @@ The public branch on Github is exactly one month behind the Azure DevOps version
 ### Features
     -   DirectX12 Ultimate
     -   ImGui
+    -   .FBX File Rendering -IN PROGRESS-
 
 ### Packages in Use
     -   DirectX12 Agility SDK
