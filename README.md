@@ -9,7 +9,6 @@ The public branch on Github is exactly one month behind the Azure DevOps version
 
 Renderer: DirectX12 Ultimate
 
-Packages in use:
     -   DirectX12 Agility SDK
     -   PIX
   
