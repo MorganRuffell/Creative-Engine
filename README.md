@@ -6,9 +6,10 @@ Creative Engine is a student project developed by a third year undergraduate com
 The public branch on Github is exactly one month behind the Azure DevOps version that I'm working on, some code has been removed to protect some Intellectual Property.
 
 ### Features
+    -   DirectX12 Ultimate
+    -   ImGui
 
-Renderer: DirectX12 Ultimate
-
+### Packages in Use
     -   DirectX12 Agility SDK
     -   PIX
   
