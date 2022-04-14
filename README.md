@@ -1,9 +1,10 @@
 # Creative Engine Public Branch
 The public branch of Creative Engine, a DirectX12 Graphics Engine I'm building as my Final Major Project for university.
 
-Creative Engine is a student project developed by a third year undergraduate computer games technology student, you are more than welcome to fork, contribute or propose changes!
+Creative Engine is a student project developed by a third year undergraduate computer games technology student, you are more than welcome to contribute or propose changes!
 
 The public branch on Github is exactly one month behind the Azure DevOps version that I'm working on, some code has been removed to protect some Intellectual Property.
+All in all this is just a fun computer graphics project using microsoft technology I think is super cool!
 
 ### Features
     -   DirectX12 Ultimate
