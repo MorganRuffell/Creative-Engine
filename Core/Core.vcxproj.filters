@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="Shaders\BicubicHorizontalUpsamplePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsampleGammaPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsamplePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicVerticalUpsamplePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BilinearUpsamplePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BufferCopyPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosHorizontalPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosVerticalPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\MagnifyPixelsPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\MotionBlurFinalPassPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\PresentSDRPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ScaleAndCompositeHDRPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ScaleAndCompositeSDRPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SharpeningUpsampleGammaPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SharpeningUpsamplePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\UpsampleAndBlurCS.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ToneMapHDR2CS.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ToneMapHDRCS.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AdaptExposureCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoBlurUpsampleBlendOutCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoBlurUpsampleCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoBlurUpsamplePreMinBlendOutCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoBlurUpsamplePreMinCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoPrepareDepthBuffers1CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoPrepareDepthBuffers2CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoRender1CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AoRender2CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ApplyBloom2CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ApplyBloomCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\AverageLumaCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsampleCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsampleFast16CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsampleFast24CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BicubicUpsampleFast32CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic32InnerSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic32OuterSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic32PreSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic64InnerSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic64OuterSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\Bitonic64PreSortCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BitonicIndirectArgsCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BloomExtractAndDownsampleHdrCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BloomExtractAndDownsampleLdrCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BlurCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\BoundNeighborhoodCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CameraMotionBlurPrePassCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CameraMotionBlurPrePassLinearZCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CameraVelocityCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CompositeSDRPS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CopyBackPostBufferCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DebugLuminanceLdr2CS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DebugLuminanceLdrCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DebugSSAOCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFCombineCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFCombineFastCS.hlsl">
+      <Filter>Shaders\Compute\PBR</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFDebugBlueCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFDebugGreenCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFDebugRedCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFMedianFilterCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFMedianFilterFixupCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFMedianFilterSepAlphaCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPass1CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPass2CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPass2DebugCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPass2FastCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPass2FixupCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPreFilterCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPreFilterFastCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFPreFilterFixupCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFTilePassCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DoFTilePassFixupCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DownsampleBloomAllCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DownsampleBloomCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DownsampleDepthPS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass1_Luma_CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass1_Luma2_CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass1_RGB_CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass1_RGB2_CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2H2CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2HCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2HDebug2CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2HDebugCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2V2CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2VCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2VDebug2CS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAPass2VDebugCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FXAAResolveWorkQueueCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ExtractLumaCS.hlsl">
+      <Filter>Shaders\Compute\Camera</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosFast16CS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosFast24CS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LanczosFast32CS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\LinearizeDepthCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\MotionBlurFinalPassCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\MotionBlurPrePassCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ResolveTAACS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SharpenTAACS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\TemporalBlendCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ToneMap2CS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ToneMapCS.hlsl">
+      <Filter>Shaders\Compute\Mips</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\GenerateHistogramCS.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DebugDrawHistogramCS.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ScreenQuadPresentVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ScreenQuadCommonVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBionicSort.cpp">
+      <Filter>CAlgorithim</Filter>
+    </ClCompile>
+    <ClCompile Include="CBinarySearch.cpp">
+      <Filter>CAlgorithim</Filter>
+    </ClCompile>
+    <ClCompile Include="CViewportCamera.cpp">
+      <Filter>CCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraController.cpp">
+      <Filter>CCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="CGPUTimerManager.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsCommon.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="CUtility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CGraphicsUploadBuffer.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadbackBuffer.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplerManager.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraShadowBuffer.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="SSAO.cpp">
+      <Filter>CDirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="CInternalWindowsTime.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CPixelBuffer.cpp">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferManager.cpp">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="CRGBBuffer.cpp">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="CCommandAllocatorPool.cpp">
+      <Filter>CDirectX\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CCommandContext.cpp">
+      <Filter>CDirectX\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\CommandLineArg.cpp">
+      <Filter>CDirectX\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CDXIndirectArgument.cpp">
+      <Filter>CDirectX\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CContigiousAllocator.cpp">
+      <Filter>CDirectX\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="CGPUDepthBuffer.cpp">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="CGPUBuffer.cpp">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="RootSignature.cpp">
+      <Filter>CDirectX\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="CDescriptorHeap.cpp">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="CDynamicDescriptorHeap.cpp">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoolBase.cpp">
+      <Filter>CAlgorithim</Filter>
+    </ClCompile>
+    <ClCompile Include="CDOFSettings.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="FXAA.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="CMotionBlurSettings.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="CPostEffects.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowCamera.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="CTAAEffects.cpp">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="DXRResources\CRaytracingRenderer.cpp">
+      <Filter>CDirectX\Raytracing</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_draw.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_tables.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_widgets.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_impl_dx12.cpp">
+      <Filter>External\ImGui\PlatformSpecifcImp</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_impl_win32.cpp">
+      <Filter>External\ImGui\PlatformSpecifcImp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasePipelineStateObject.cpp">
+      <Filter>CDirectX\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="PipelineState.cpp">
+      <Filter>CDirectX\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectX12Core.cpp">
+      <Filter>CDirectX\Core\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectXTest.cpp">
+      <Filter>CDirectX\Core\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseSingleton.cpp">
+      <Filter>Utility\Design Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore.cpp">
+      <Filter>Utility\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Utility\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineProfiling.cpp">
+      <Filter>Utility\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CEngineBespokeTypes.cpp">
+      <Filter>Utility\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearAllocator.cpp">
+      <Filter>Utility\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_demo.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtility.cpp">
+      <Filter>Utility\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\CMathCore.cpp">
+      <Filter>CMath\CMathBounding</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\CSphereCollider.cpp">
+      <Filter>CMath\CMathBounding</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\CMFrustum.cpp">
+      <Filter>CMath\CCameraMath</Filter>
+    </ClCompile>
+    <ClCompile Include="CRGBAColour.cpp">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Random.cpp">
+      <Filter>CMath\CMathCore</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageScaling.cpp">
+      <Filter>CMath\CMathCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>CMaterial\CTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextureManager.cpp">
+      <Filter>CMaterial\CTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterial.cpp">
+      <Filter>CMaterial\CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="CGPSOHandle.cpp">
+      <Filter>CMaterial\CMaterial</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\GraphEditor.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\ImCurveEdit.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\ImGradient.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\ImGuizmo.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\ImSequencer.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="CCommandListManager.cpp">
+      <Filter>CDirectX\Command\CommandLists</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBionicSort.h">
+      <Filter>CAlgorithim</Filter>
+    </ClInclude>
+    <ClInclude Include="CBinarySearch.h">
+      <Filter>CAlgorithim</Filter>
+    </ClInclude>
+    <ClInclude Include="CViewportCamera.h">
+      <Filter>CCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraController.h">
+      <Filter>CCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Common.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dx12.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>CMaterial</Filter>
+    </ClInclude>
+    <ClInclude Include="dds.h">
+      <Filter>CMaterial</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPUBaseResource.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPUTimerManager.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsCommon.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CGraphicsUploadBuffer.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadbackBuffer.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplerManager.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraShadowBuffer.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="SSAO.h">
+      <Filter>CDirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="CInternalWindowsTime.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CPixelBuffer.h">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferManager.h">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="CRGBBuffer.h">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="CCommandAllocatorPool.h">
+      <Filter>CDirectX\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CCommandContext.h">
+      <Filter>CDirectX\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\CommandLineArg.h">
+      <Filter>CDirectX\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CDXIndirectArgument.h">
+      <Filter>CDirectX\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CContigiousAllocator.h">
+      <Filter>CDirectX\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPUDepthBuffer.h">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPUBuffer.h">
+      <Filter>CDirectX\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPURamAllocator.h">
+      <Filter>CDirectX\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="RootSignature.h">
+      <Filter>CDirectX\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="CDescriptorHeap.h">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClInclude>
+    <ClInclude Include="CDynamicDescriptorHeap.h">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoolBase.h">
+      <Filter>CAlgorithim</Filter>
+    </ClInclude>
+    <ClInclude Include="CDOFSettings.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="FXAA.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="CMotionBlurSettings.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="CPostEffects.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowCamera.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="CTAAEffects.h">
+      <Filter>CCamera\CCameraEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>CResources</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CDXRHelpers.h">
+      <Filter>CDirectX\Raytracing</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\ManagedPointers\CSmartFatPointer.h">
+      <Filter>CDirectX\Raytracing\CDXRManagedPointers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CDXRGPUConstantBuffer.h">
+      <Filter>CDirectX\Raytracing\CDXRBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CDXRGPUStructuredBuffer.h">
+      <Filter>CDirectX\Raytracing\CDXRBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CDXRGPUUploadBuffer.h">
+      <Filter>CDirectX\Raytracing\CDXRBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CShaderRow.h">
+      <Filter>CDirectX\Raytracing\CDXRStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CShaderTable.h">
+      <Filter>CDirectX\Raytracing\CDXRStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DXRResources\CRaytracingRenderer.h">
+      <Filter>CDirectX\Raytracing</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_impl_dx12.h">
+      <Filter>External\ImGui\PlatformSpecifcImp</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imconfig.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_internal.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_impl_win32.h">
+      <Filter>External\ImGui\PlatformSpecifcImp</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasePipelineStateObject.h">
+      <Filter>CDirectX\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="PipelineState.h">
+      <Filter>CDirectX\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirectX12Core.h">
+      <Filter>CDirectX\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirectXTest.h">
+      <Filter>CDirectX\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CTestBase.h">
+      <Filter>CDirectX\Core\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseSingleton.h">
+      <Filter>Utility\Design Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineInput.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineProfiling.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CEngineBespokeTypes.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearAllocator.h">
+      <Filter>Utility\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_filebrowser.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="FileUtility.h">
+      <Filter>Utility\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CSphereCollider.h">
+      <Filter>CMath\CMathBounding</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMatrix3.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMatrix4.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CBoundingBox.h">
+      <Filter>CMath\CMathBounding</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMFrustum.h">
+      <Filter>CMath\CCameraMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CPlaneCollider.h">
+      <Filter>CMath\CMathBounding</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CQuarternion.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="CRGBAColour.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CScalar.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CVector.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\CMathCore.h">
+      <Filter>CMath\CMathCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Random.h">
+      <Filter>CMath\CMathCore</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorMath.h">
+      <Filter>CMath\CMathCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Transform.h">
+      <Filter>CMath\CMatrixes</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageScaling.h">
+      <Filter>CMath\CMathCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CTextureManager.h">
+      <Filter>CMaterial\CTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>CMaterial\CTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="CMaterial.h">
+      <Filter>CMaterial\CMaterial</Filter>
+    </ClInclude>
+    <ClInclude Include="CGPSOHandle.h">
+      <Filter>CMaterial\CMaterial</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\GraphEditor.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\ImCurveEdit.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\ImGradient.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\ImGuizmo.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\ImSequencer.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="CCommandListManager.h">
+      <Filter>CDirectX\Command\CommandLists</Filter>
+    </ClInclude>
+    <ClInclude Include="CDescriptorHeapBase.h">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClInclude>
+    <ClInclude Include="CDescriptorHandle.h">
+      <Filter>CDirectX\Heaps</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\ShaderUtility.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\SSAORS.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="packages.config">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\PixelPacking.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\PixelPacking_R11G11B10.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\PixelPacking_RGBE.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\PixelPacking_RGBM.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Math\Functions.inl">
+      <Filter>Utility</Filter>
+    </None>
+    <None Include="Shaders\LanczosFunctions.hlsli">
+      <Filter>Shaders\Root Signatures</Filter>
+    </None>
+    <None Include="Shaders\MotionBlurRS.hlsli">
+      <Filter>Shaders\Root Signatures</Filter>
+    </None>
+    <None Include="Shaders\PostEffectsRS.hlsli">
+      <Filter>Shaders\Root Signatures</Filter>
+    </None>
+    <None Include="Shaders\PresentRS.hlsli">
+      <Filter>Shaders\Root Signatures</Filter>
+    </None>
+    <None Include="Shaders\AoBlurAndUpsampleCS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\AoRenderCS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\BicubicFilterFunctions.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\BitonicSortCommon.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\ColorSpaceUtility.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\CommonRS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\DoFCommon.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\FXAAPass2CS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\FXAAPass1CS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\FXAARootSignature.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\GenerateMipsCS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+    <None Include="Shaders\DoFRS.hlsli">
+      <Filter>Shaders\Compute\Libraries</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CAlgorithim">
+      <UniqueIdentifier>{5eaf5f49-22e4-4705-ab87-ca6cb1908c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX">
+      <UniqueIdentifier>{831a951b-e1eb-4b91-8672-a6b24154cc3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMath">
+      <UniqueIdentifier>{5e9ec22e-dc01-43c0-ac63-4bcf3069fdbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CCamera">
+      <UniqueIdentifier>{7fb05372-66f9-42f2-8a51-b1dda7667cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{31c6088c-0cd2-4e48-a62f-c5b42b717e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{c5df3e3a-73f5-4b5b-8688-112163941bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Buffers">
+      <UniqueIdentifier>{fc76dab7-f95c-4674-98c4-d402f3c9fbdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Command">
+      <UniqueIdentifier>{4d9059b2-bb56-41a5-a700-c74e5ee74bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Allocators">
+      <UniqueIdentifier>{76e0b47f-f017-449e-9955-923ece792a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Core">
+      <UniqueIdentifier>{2315e97e-242e-4c6c-a01a-972b46581ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Heaps">
+      <UniqueIdentifier>{1e3ca592-3493-45ce-a9df-5f4692a03d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CCamera\CCameraEffect">
+      <UniqueIdentifier>{17cd3742-d4c3-4971-bc1f-d45b21ad9474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CResources">
+      <UniqueIdentifier>{49ab06c4-a666-428c-ae42-a5d7a935b03b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Raytracing">
+      <UniqueIdentifier>{54a4a0fe-d568-4bf2-b106-9870d92ec899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Raytracing\CDXRManagedPointers">
+      <UniqueIdentifier>{d5ff62eb-3e16-456a-ab25-fcddc17d33ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Raytracing\CDXRBuffers">
+      <UniqueIdentifier>{30f0952c-aa19-4d88-8547-0b9dc56fcdcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Raytracing\CDXRStructures">
+      <UniqueIdentifier>{08f8c064-f13c-4b42-befa-56ba899dddc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute">
+      <UniqueIdentifier>{33a6d2fd-3b4b-4ae6-9f34-47e16e5f34b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Pixel">
+      <UniqueIdentifier>{3b6be2a4-f36a-4210-a1c8-feef13a14dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Root Signatures">
+      <UniqueIdentifier>{fc689074-65ce-4f8f-b4c5-424877bc81b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Pipeline">
+      <UniqueIdentifier>{ddfd7445-ae86-4774-bfdc-5ec7869bbf78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Core\Core">
+      <UniqueIdentifier>{9b925b11-43e0-43d0-a8c3-8cf2810ac530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Design Patterns">
+      <UniqueIdentifier>{705690d6-fca1-404e-8775-ca43cdffc99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\EngineCore">
+      <UniqueIdentifier>{b108a9fd-81be-4ac6-aee4-8db81e3baf90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Allocators">
+      <UniqueIdentifier>{9cd3b538-ea23-4399-b518-6a5030d74bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{7c795cba-7a7a-4ae2-bd9d-cb79dbe1b365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\ImGui">
+      <UniqueIdentifier>{f51c9595-6d0b-49af-9495-336aeaa29126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\ImGui\PlatformSpecifcImp">
+      <UniqueIdentifier>{f8ea2b90-e75a-4df9-b26f-165cbcf3383f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMath\CMathBounding">
+      <UniqueIdentifier>{e538fd72-4c9e-420e-a06c-d17d73fecd82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMath\CMatrixes">
+      <UniqueIdentifier>{9e2d2ac5-2fb4-4184-88a0-eb57194f12bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMath\CCameraMath">
+      <UniqueIdentifier>{a374eada-ade3-4409-9349-b388f3d09e9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMath\CMathCore">
+      <UniqueIdentifier>{ea472d3a-fb96-47b6-beb4-59abeb01f833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute\PBR">
+      <UniqueIdentifier>{9766e2ab-9b1a-45e6-8cf8-82bb136b7015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute\Camera">
+      <UniqueIdentifier>{aa404098-df7a-44d4-9146-2ceb12cf910e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute\Libraries">
+      <UniqueIdentifier>{6160d16d-5625-4772-adca-9fb79ac9bf33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute\Mips">
+      <UniqueIdentifier>{8bbb09a3-f9bb-414a-8271-f74d38e478da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMaterial">
+      <UniqueIdentifier>{c68f0bc2-e6ae-4fd5-b49e-c408d4204302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMaterial\CTexture">
+      <UniqueIdentifier>{7e0ffb31-98d9-4f01-b240-cbb85fe1c2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMaterial\CMaterial">
+      <UniqueIdentifier>{c16acf87-3f27-4038-bfd3-6534b6020b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Vertex">
+      <UniqueIdentifier>{7e7fa0d9-312b-474d-9bc6-a51a29460acc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CDirectX\Command\CommandLists">
+      <UniqueIdentifier>{6de23674-f931-4fd8-9476-37739fa7f4af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\engineResources\Creative Icon InEngine 512.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Creative Icon InEngine.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\CreativeEngineLogo.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\CreativeEngineSplashScreen.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Folder With Stuff in it.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Folder.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\CreativeEngine.ico">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Creative Icon v1.ico">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\CreativeEngineSplashScreen.bmp">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Details Logo.png">
+      <Filter>CResources</Filter>
+    </Image>
+    <Image Include="..\Resources\engineResources\Content Browser Logo.png">
+      <Filter>CResources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CECore.rc">
+      <Filter>CResources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

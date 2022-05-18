@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="SponzaRenderer.cpp">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\CScene\CSceneAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildH3D.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="glTF.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexOptimizePostTransform.cpp">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="LightManager.cpp">
+      <Filter>Source Files\CLighting</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\CScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelConvert.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelH3D.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureConvert.cpp">
+      <Filter>Source Files\CImport</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\External\miniz.c">
+      <Filter>Source Files\External\openfbx</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\External\ofbx.cpp">
+      <Filter>Source Files\External\openfbx</Filter>
+    </ClCompile>
+    <ClCompile Include="CFBXImporter.cpp">
+      <Filter>Source Files\CImport\CFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshCastBase.cpp">
+      <Filter>Source Files\CImport\MeshConversion</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshConvert.cpp">
+      <Filter>Source Files\CImport\MeshConversion</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3e74f37f-1e1e-47ed-9c44-213389384278}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{9169b7c9-f1a7-41d4-9098-58de36da850c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CRenderer">
+      <UniqueIdentifier>{ab62ef3e-94a1-4c29-8f58-9c6a65abe554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CImport">
+      <UniqueIdentifier>{fd4823e1-8d0c-429a-85fe-8ba1c1fb6fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CLighting">
+      <UniqueIdentifier>{d3970520-e07b-4a11-84f4-7aad46035738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CRenderer\CSceneBuffers">
+      <UniqueIdentifier>{040a3f96-7472-4cfe-b1ce-f2fb754f9012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene">
+      <UniqueIdentifier>{a469d0a6-ffb2-4600-9b3b-1fe5af280ea3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Pixel">
+      <UniqueIdentifier>{b9086c69-e7bc-4eda-bd68-b9cbef0759aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Vertex">
+      <UniqueIdentifier>{b713c3db-221b-49bf-8e94-a6e1e54f4ef5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Library">
+      <UniqueIdentifier>{b0eed5da-66d2-43ae-9a4b-711a3183d642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Compute">
+      <UniqueIdentifier>{bbed6afc-c170-4630-a9d4-e4e3d9fcbd02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene\CAnimationComponents">
+      <UniqueIdentifier>{a324018d-2c82-4d5b-a621-d5a62faa9aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene\CSceneAnimation">
+      <UniqueIdentifier>{11fa3b67-320d-46b0-b325-d93593315f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene\CMeshTypes">
+      <UniqueIdentifier>{a418fc90-f51b-400b-9e3e-3386f44b78ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene\CMeshTypes\Animation">
+      <UniqueIdentifier>{001148da-1b54-48a2-b7b7-3ce9ae3ec107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CScene\CMeshTypes\Static">
+      <UniqueIdentifier>{82458977-4def-46f1-a9ae-96d0101f3e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CImport\CObj">
+      <UniqueIdentifier>{91510480-465c-44db-b4cf-c8dbe19bd108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CImport\CFBX">
+      <UniqueIdentifier>{e685b630-9b09-431e-86f8-464ef6d64a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\External">
+      <UniqueIdentifier>{8859ba2b-2fdb-4921-b523-7d0d0a278223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\External\openfbx">
+      <UniqueIdentifier>{0581c56a-66dc-4199-81aa-8fbc1173852e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CImport\MeshConversion">
+      <UniqueIdentifier>{0b08675d-f645-4fef-8795-fe1af42ef0eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SponzaRenderer.h">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="glTF.h">
+      <Filter>Source Files\CImport</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexOptimizePostTransform.h">
+      <Filter>Source Files\CRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="LightManager.h">
+      <Filter>Source Files\CLighting</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Source Files\External</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantBuffers.h">
+      <Filter>Source Files\CRenderer\CSceneBuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Source Files\CScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelH3D.h">
+      <Filter>Source Files\CImport</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Source Files\CImport</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureConvert.h">
+      <Filter>Source Files\CImport</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseMesh.h">
+      <Filter>Source Files\CScene\CMeshTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="CJoint.h">
+      <Filter>Source Files\CScene\CAnimationComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationCurve.h">
+      <Filter>Source Files\CScene\CAnimationComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationState.h">
+      <Filter>Source Files\CScene\CAnimationComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimationSet.h">
+      <Filter>Source Files\CScene\CAnimationComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CDynamicMesh.h">
+      <Filter>Source Files\CScene\CMeshTypes\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CSkinnedMesh.h">
+      <Filter>Source Files\CScene\CMeshTypes\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="CCompositeMesh.h">
+      <Filter>Source Files\CScene\CMeshTypes\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="CStaticMesh.h">
+      <Filter>Source Files\CScene\CMeshTypes\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\External\miniz.h">
+      <Filter>Source Files\External\openfbx</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\External\ofbx.h">
+      <Filter>Source Files\External\openfbx</Filter>
+    </ClInclude>
+    <ClInclude Include="CFBXImporter.h">
+      <Filter>Source Files\CImport\CFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshCastBase.h">
+      <Filter>Source Files\CImport\MeshConversion</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshConvert.h">
+      <Filter>Source Files\CImport\MeshConversion</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Shaders\Common.hlsli">
+      <Filter>Shaders\Library</Filter>
+    </None>
+    <None Include="Shaders\FillLightGridCS.hlsli">
+      <Filter>Shaders\Library</Filter>
+    </None>
+    <None Include="Shaders\LightGrid.hlsli">
+      <Filter>Shaders\Library</Filter>
+    </None>
+    <None Include="Shaders\Lighting.hlsli">
+      <Filter>Shaders\Library</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\CScenePS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SkyboxPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DepthViewerPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentNoUV1PS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoUV1PS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CutoutDepthPS.hlsl">
+      <Filter>Shaders\Pixel</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CutoutDepthSkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\CutoutDepthVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentNoUV1SkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentSkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoUV1SkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentNoUV1VS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoTangentVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultNoUV1VS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultSkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DefaultVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DepthOnlySkinVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DepthOnlyVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\DepthViewerVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\SkyboxVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\ModelViewerVS.hlsl">
+      <Filter>Shaders\Vertex</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FillLightGridCS_24.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FillLightGridCS_32.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\FillLightGridCS_64.hlsl">
+      <Filter>Shaders\Compute</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

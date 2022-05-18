@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CTexture">
+    <Position X="4" Y="2.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>CAgJAEQAcAAAAAIBAAAAAABAQABAAgCBAAkgAECAADA=</HashCode>
+      <FileName>CTexture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CGPUResource">
+    <Position X="8" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQQAAAAAAAAQAAAAAgIJAEBAAAAAAAEACQAAAAA=</HashCode>
+      <FileName>CGPUBaseResource.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCommandContext" Collapsed="true">
+    <Position X="8.5" Y="7" Width="3.25" />
+    <Members>
+      <Method Name="CCommandContext" Hidden="true" />
+      <Method Name="CopyBuffer" Hidden="true" />
+      <Method Name="CopyBufferRegion" Hidden="true" />
+      <Method Name="CopyCounter" Hidden="true" />
+      <Method Name="CopySubresource" Hidden="true" />
+      <Method Name="CopyTextureRegion" Hidden="true" />
+      <Method Name="DestroyAllContexts" Hidden="true" />
+      <Method Name="FillBuffer" Hidden="true" />
+      <Method Name="Finish" Hidden="true" />
+      <Method Name="Flush" Hidden="true" />
+      <Method Name="FlushResourceBarriers" Hidden="true" />
+      <Method Name="GetCommandAllocator" Hidden="true" />
+      <Method Name="GetCommandList" Hidden="true" />
+      <Method Name="GetCComputeContext" Hidden="true" />
+      <Method Name="GetGraphicsContext" Hidden="true" />
+      <Method Name="getSRVHeap" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Method Name="InitializeBuffer" Hidden="true" />
+      <Method Name="InitializeTexture" Hidden="true" />
+      <Method Name="InitializeTextureArraySlice" Hidden="true" />
+      <Method Name="InsertAliasBarrier" Hidden="true" />
+      <Method Name="InsertTimeStamp" Hidden="true" />
+      <Method Name="InsertUAVBarrier" Hidden="true" />
+      <Field Name="m_CurrentAllocator" Hidden="true" />
+      <Field Name="m_CurrentDescriptorHeaps" Hidden="true" />
+      <Field Name="m_DynamicSamplerDescriptorHeap" Hidden="true" />
+      <Field Name="m_DynamicViewDescriptorHeap" Hidden="true" />
+      <Field Name="m_GpuLinearAllocator" Hidden="true" />
+      <Field Name="m_ID" Hidden="true" />
+      <Method Name="PIXBeginEvent" Hidden="true" />
+      <Method Name="PIXEndEvent" Hidden="true" />
+      <Method Name="PIXSetMarker" Hidden="true" />
+      <Method Name="ReadbackTexture" Hidden="true" />
+      <Method Name="ReserveUploadMemory" Hidden="true" />
+      <Method Name="Reset" Hidden="true" />
+      <Method Name="ResetCounter" Hidden="true" />
+      <Method Name="ResolveTimeStamps" Hidden="true" />
+      <Method Name="SetDescriptorHeap" Hidden="true" />
+      <Method Name="SetDescriptorHeaps" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IBBJoAgEACkJhQaUiJoQIAIAAgASEIQOAAAEoWC4AKo=</HashCode>
+      <FileName>CCommandContext.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBaseSingleton" Collapsed="true">
+    <Position X="12.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAA=</HashCode>
+      <FileName>CBaseSingleton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CETextureWrapmode">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>CTexture.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CETextureFilterMode">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAABAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CTexture.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CESupportedTypes">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAECAAAA=</HashCode>
+      <FileName>CTexture.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
