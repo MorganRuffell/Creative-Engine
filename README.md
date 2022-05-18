@@ -1,5 +1,5 @@
  ![alt text](https://github.com/MorganRuffell/Creative-Engine/blob/master/Resources/engineResources/CreativeEngineSplashScreen.png))
-# Creative Engine 
+ 
 The public branch of Creative Engine, a DirectX12 Graphics Engine I'm building as my Final Major Project for university, and will likely continue to develop because I think it's cool.
 
 Creative Engine is a student project developed by a third year undergraduate computer games technology student, you are more than welcome to contribute or propose changes!
