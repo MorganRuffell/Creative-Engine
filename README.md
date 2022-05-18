@@ -17,5 +17,5 @@ All in all this is just a fun computer graphics project using microsoft technolo
   
 #### Legal
 The code within this repository is property of Ruffell Interactive Limited, a company guaranteed by shares in the United Kingdom. 
-This code is licenced under the GPL-3.0 Licence. Details of which are stored in the licence file.
+This code is licenced under the CC-NC-ND Licence. Details of which are stored in the licence file.
 
