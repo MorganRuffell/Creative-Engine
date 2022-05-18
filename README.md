@@ -1,4 +1,4 @@
-          ![alt text](https://github.com/MorganRuffell/Creative-Engine/blob/master/ReadmeLogo.png)
+   ![alt text](https://github.com/MorganRuffell/Creative-Engine/blob/master/ReadmeLogo.png)
  
 # Creative Engine V0.1
 
