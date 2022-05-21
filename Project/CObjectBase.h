@@ -1,0 +1,7 @@
+class CObjectBase
+{
+    CObjectBase();
+
+    
+
+}

@@ -821,6 +821,9 @@
     <ClInclude Include="CDescriptorHandle.h">
       <Filter>CDirectX\Heaps</Filter>
     </ClInclude>
+    <ClInclude Include="L2DFileDialog.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\ShaderUtility.hlsli">

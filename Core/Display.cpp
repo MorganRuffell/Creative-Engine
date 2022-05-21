@@ -20,6 +20,7 @@
 #include "../ImGUI/imgui_impl_win32.h"
 #include "../ImGUI/imgui_impl_dx12.h"
 #include "../ImGUI/ImGuizmo.h"
+#include "L2DFileDialog.h"
 
 
 #pragma comment(lib, "dxgi.lib") 
@@ -372,6 +373,8 @@ void Display::InitGUI(const HWND& hwnd)
 	inputOutput.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 	inputOutput.ConfigFlags |= ImGuiConfigFlags_NavEnableSetMousePos;
 
+    inputOutput.Fonts->AddFontFromFileTTF("..\\Resources\\fonts\\Roboto-Regular.ttf", 14);    
+
 	D3D12_DESCRIPTOR_HEAP_DESC desc = {};
 	desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
 	desc.NumDescriptors = 4;
@@ -396,7 +399,6 @@ void Display::UpdateUI()
 
 	CCommandContext& Context = CCommandContext::Begin(L"UICommandContext");
 	CGraphicsContext& GPUContext = Context.GetGraphicsContext();
-
 
 	auto NewCommandList = GPUContext.GetCommandList();
 	auto NewCommandAllocator = Context.GetCommandAllocator();
@@ -441,8 +443,8 @@ void Display::UpdateUI()
 	g_CommandManager.GetQueue(D3D12_COMMAND_LIST_TYPE_DIRECT).ExecuteCommandList(NewCommandList);
 
 	GPUContext.TransitionResource(g_DisplayPlane[l_backbufferindex], D3D12_RESOURCE_STATE_PRESENT, true);
-	GPUContext.Flush(true);
-	GPUContext.Finish(true);
+	Context.Finish();
+
 
 	s_SwapChain->Present(1, 0);
 }
@@ -457,6 +459,8 @@ void Display::DrawGUI()
 	ImVec2 FileExplorerPosition(0, 1000.0f);
 
 	ImGui::StyleColorsDark();
+
+
 
 	ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(11.0f, 11.0f));
 	ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(7.0f, 10.0f));
@@ -812,6 +816,9 @@ void Display::DrawGUI()
 
 						if (ImGui::RadioButton("OpenGL", false)) {}
 
+                        if (ImGui::RadioButton("Vulkan", false)) {}
+
+
 						ImGui::PopStyleVar();
 						ImGui::PopStyleVar();
 						ImGui::PopStyleVar();
@@ -979,6 +986,7 @@ void Display::DrawGUI()
 
 		ImGui::BeginChild("Scene Outliner", { 500.0f, 210.0 }, true, ImGuiWindowFlags_None);
 		{
+
 			ImGui::SetWindowFontScale(1.2f);
 			ImGui::TextWrapped("Scene Outliner");
 			ImGui::SetWindowFontScale(1.0f);
@@ -1192,7 +1200,7 @@ void Display::DrawGUI()
 				ImGui::StyleColorsDark();
 
 
-				ImGui::Text("Scale			 ");
+				ImGui::Text("Scale			   ");
 				ImGui::SameLine();
 				ImGui::StyleColorsX();
 				ImGui::DragFloat("X", BasePosition, 0.1, -360, 360);
@@ -1463,43 +1471,7 @@ void Display::DrawGUI()
 		ImGui::PopStyleVar();
 		ImGui::PopStyleVar();
 
-
-
-		ImGui::BeginChild("Lemonade", { 300.0f, 352.0f }, true, ImGuiWindowFlags_None);
-		{
-			ImGui::SetWindowFontScale(1.2f);
-			ImGui::TextWrapped("Content");
-			ImGui::SetWindowFontScale(1.0f);
-
-			ImGui::Separator();
-
-			if (ImGui::TreeNodeEx("Root", ImGuiTreeNodeFlags_DefaultOpen))
-			{
-				ImGui::TreeNodeEx("Static Meshes", ImGuiTreeNodeFlags_DefaultOpen);
-				ImGui::TreeNode("CrytekSponzaPavillion");
-				ImGui::TreePop();
-
-				ImGui::TreeNodeEx("Skinned Meshes", ImGuiTreeNodeFlags_DefaultOpen);
-				ImGui::TreeNode("SeaMonster");
-				ImGui::TreeNode("Paul");
-				ImGui::TreePop();
-
-				ImGui::TreeNodeEx("Sounds", ImGuiTreeNodeFlags_DefaultOpen);
-				ImGui::TreeNode("SweetChildOMine.mp3");
-				ImGui::TreeNode("Sleepwalking.aac");
-				ImGui::TreeNode("Throne.mp3");
-				ImGui::TreePop();
-
-
-				ImGui::TreePop();
-			}
-
-
-			ImGui::EndChild();
-		}
-
-		ImGui::SameLine();
-		ImGui::BeginChild("Oranges", { 1730, 352.0f }, true, ImGuiWindowFlags_None);
+		ImGui::BeginChild("Oranges", { 2030.0f, 352.0f }, true, ImGuiWindowFlags_None);
 		{
 			ImGui::SetWindowFontScale(1.2f);
 
@@ -1524,6 +1496,21 @@ void Display::DrawGUI()
 			}
 
 			ImGui::Separator();
+
+            static char* file_dialog_buffer = nullptr;
+            static char path1[500] = "..\\Project";
+
+            ImGui::SetNextItemWidth(380);
+            ImGui::InputText("##path1", path1, sizeof(path1));
+            ImGui::SameLine();
+            file_dialog_buffer = path1;
+            FileDialog::file_dialog_open = true;
+            FileDialog::file_dialog_open_type = FileDialog::FileDialogType::SelectFolder;
+            
+            if (FileDialog::file_dialog_open) {
+                FileDialog::ShowFileDialog(&FileDialog::file_dialog_open, file_dialog_buffer, sizeof(file_dialog_buffer), FileDialog::file_dialog_open_type);
+            }
+
 
 			ImGui::EndChild();
 		}

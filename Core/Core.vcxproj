@@ -150,6 +150,7 @@
     <ClInclude Include="ImGUI\imgui_impl_win32.h" />
     <ClInclude Include="ImGUI\imgui_internal.h" />
     <ClInclude Include="ImGUI\ImSequencer.h" />
+    <ClInclude Include="L2DFileDialog.h" />
     <ClInclude Include="LinearAllocator.h" />
     <ClInclude Include="Math\CBoundingBox.h" />
     <ClInclude Include="Math\CPlaneCollider.h" />

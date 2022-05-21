@@ -119,7 +119,6 @@ namespace CECore
 
         std::cout << "Application Initalized" << std::endl;
         
-        ImGui::StyleColorsLight();
         ImGui_ImplDX12_NewFrame();
         ImGui_ImplWin32_NewFrame();
         ImGui::NewFrame();
@@ -143,9 +142,6 @@ namespace CECore
 
             if (msg.message == WM_QUIT)
                 break;
-
-
-
         }
         
         TerminateApplication(Engine);
