@@ -135,7 +135,7 @@ namespace FileDialog {
                 ImGui::SetColumnWidth(1, initial_spacing_column_1);
                 initial_spacing_column_1 = 0.0f;
             }
-            static float initial_spacing_column_2 = 110.0f;
+            static float initial_spacing_column_2 = 150.0f;
             if (initial_spacing_column_2 > 0) {
                 ImGui::SetColumnWidth(2, initial_spacing_column_2);
                 initial_spacing_column_2 = 0.0f;
@@ -213,9 +213,11 @@ namespace FileDialog {
             }
 
             for (int i = 0; i < files.size(); ++i) {
-                if (ImGui::Selectable(files[i].path().filename().string().c_str(), i == file_dialog_file_select_index, ImGuiSelectableFlags_AllowDoubleClick, ImVec2(ImGui::GetWindowContentRegionWidth(), 0))) {
+
+                if (ImGui::Selectable(files[i].path().filename().replace_extension("").string().c_str(), i == file_dialog_file_select_index, ImGuiSelectableFlags_AllowDoubleClick, ImVec2(ImGui::GetWindowContentRegionWidth(), 0))) {
                     file_dialog_file_select_index = i;
                     file_dialog_current_file = files[i].path().filename().string();
+
                     file_dialog_current_folder = "";
                 }
                 ImGui::NextColumn();

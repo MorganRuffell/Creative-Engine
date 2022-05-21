@@ -5683,6 +5683,11 @@ void ImGui::ColorPickerOptionsPopup(const float* ref_col, ImGuiColorEditFlags fl
     EndPopup();
 }
 
+void ImGui::ContentBrowserPopup()
+{
+   
+}
+
 //-------------------------------------------------------------------------
 // [SECTION] Widgets: TreeNode, CollapsingHeader, etc.
 //-------------------------------------------------------------------------

@@ -170,7 +170,6 @@ namespace CGraphics
 	CGraphicsPSO s_BlendUIPSO(L"Core: BlendUI");
 	CGraphicsPSO s_BlendUIHDRPSO(L"Core: BlendUIHDR");
 
-
 	CGraphicsPSO PresentSDRPS(L"Core: PresentSDR");
 	CGraphicsPSO PresentHDRPS(L"Core: PresentHDR");
 	CGraphicsPSO CompositeSDRPS(L"Core: CompositeSDR");
