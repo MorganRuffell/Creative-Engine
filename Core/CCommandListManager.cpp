@@ -138,8 +138,12 @@ uint64_t CCommandQueue::ExecuteCommandList( ID3D12CommandList* List )
 {
     std::lock_guard<std::mutex> LockGuard(m_FenceMutex);
 
+    assert(List != nullptr);
+
     ASSERT_SUCCEEDED(((ID3D12GraphicsCommandList*)List)->Close());
+
     m_CommandQueue->ExecuteCommandLists(1, &List);
+
     m_CommandQueue->Signal(m_pFence, m_NextFenceValue);
     return m_NextFenceValue++;
 }

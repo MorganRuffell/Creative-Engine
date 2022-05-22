@@ -130,6 +130,7 @@ uint64_t CCommandContext::Finish( bool WaitForCompletion )
     FlushResourceBarriers();
 
     ASSERT(m_CurrentAllocator != nullptr);
+    ASSERT(GetCommandList() != nullptr);
 
     CCommandQueue& Queue = g_CommandManager.GetQueue(m_Type);
 

@@ -396,14 +396,12 @@ void Display::UpdateUI()
 {
 	const std::lock_guard<std::recursive_mutex> imguilock(g_imguiMutex);
 
-	CCommandContext& Context = CCommandContext::Begin(L"UICommandContext");
-	CGraphicsContext& GPUContext = Context.GetGraphicsContext();
+    CGraphicsContext& GPUContext = CGraphicsContext::Begin(L"UIGraphicsContext");
 
 	auto NewCommandList = GPUContext.GetCommandList();
-	auto NewCommandAllocator = Context.GetCommandAllocator();
+    auto NewCommandAllocator = GPUContext.GetCommandAllocator();
 
 	g_CommandManager.CreateNewCommandList(D3D12_COMMAND_LIST_TYPE_DIRECT, &NewCommandList, &NewCommandAllocator);
-
 
 	UINT l_backbufferindex = s_SwapChain->GetCurrentBackBufferIndex();
 
@@ -415,7 +413,7 @@ void Display::UpdateUI()
 	barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_PRESENT;
 	barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_RENDER_TARGET;
 
-	NewCommandList->Close();
+    NewCommandList->Close();
 	NewCommandList->Reset(NewCommandAllocator, nullptr);
 
 	NewCommandList->ResourceBarrier(1, &barrier);
@@ -430,7 +428,6 @@ void Display::UpdateUI()
 
 	Display::DrawGUI();
 	ImGui::Render();
-
 	ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), NewCommandList);
 
 
@@ -439,11 +436,11 @@ void Display::UpdateUI()
 
 	NewCommandList->ResourceBarrier(1, &barrier);
 
-	g_CommandManager.GetQueue(D3D12_COMMAND_LIST_TYPE_DIRECT).ExecuteCommandList(NewCommandList);
+    uint64_t FenceValue =  g_CommandManager.GetQueue(D3D12_COMMAND_LIST_TYPE_DIRECT).ExecuteCommandList(NewCommandList);
+    g_CommandManager.GetGraphicsQueue().DiscardAllocator(FenceValue, NewCommandAllocator);
 
 	GPUContext.TransitionResource(g_DisplayPlane[l_backbufferindex], D3D12_RESOURCE_STATE_PRESENT, true);
-	Context.Finish();
-
+    GPUContext.Finish();
 
 	s_SwapChain->Present(1, 0);
 }
