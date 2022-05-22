@@ -14,6 +14,9 @@ All in all this is just a fun computer graphics project using microsoft technolo
     -   ImGui
     -   .FBX File Rendering -IN PROGRESS-
 
+### Current Issues
+    -   Memory Leak in UI (Resolved 22/05/22)
+
 ### Packages in Use
     -   DirectX12 Agility SDK
     -   PIX
