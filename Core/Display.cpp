@@ -456,6 +456,8 @@ void Display::DrawGUI()
     ImVec2 EngineInteractionSize(600.0f, 90.0f);
     ImVec2 EngineInteractionPosition(0, 850.0f);
 
+    ImVec2 StatsSize(300.0f, 200.0f);
+
 
     ImGui::StyleColorsDark();
 
@@ -1513,12 +1515,20 @@ void Display::DrawGUI()
                         float Coloura[4] = { 1.0f, 0.1f, 0.1f,1.0f };
                         float Colourb[4] = { 0.0f, 1.0f, 1.0f,1.0f };
                         float Colour[4] = { 1.0f, 1.0f, 1.0f,1.0f };
+                        float Colourc[4] = { 0.4f, 0.4f, 0.4f,1.0f };
 
-                        ImGui::PushItemWidth(190.0f);
 
-                        ImGui::ColorPicker4("M_Curtain Albedo", Colourb, ImGuiColorEditFlags_PickerHueWheel);
-                        ImGui::ColorPicker4("M_Drapes Albedo", Coloura, ImGuiColorEditFlags_PickerHueWheel);
-                        ImGui::ColorPicker4("m_CurtianPole Albedo", Colour, ImGuiColorEditFlags_PickerHueWheel);
+                        ImGui::PushItemWidth(174.0f);
+
+                        ImGui::ColorPicker4("M_Curtain", Colourb, ImGuiColorEditFlags_PickerHueWheel);
+
+                        ImGui::SameLine();
+                        ImGui::ColorPicker4("M_Drapes", Coloura, ImGuiColorEditFlags_PickerHueWheel);
+
+                        ImGui::ColorPicker4("m_CP", Colour, ImGuiColorEditFlags_PickerHueWheel);
+
+                        ImGui::SameLine();
+                        ImGui::ColorPicker4("m_Lion", Colourc, ImGuiColorEditFlags_PickerHueWheel);
 
 
                         ImGui::PopItemWidth();
@@ -1580,7 +1590,7 @@ void Display::DrawGUI()
 
                             ImGui::TableNextRow(0, 20.0f);
 
-                            ImGui::TableNextColumn(); ImGui::Checkbox("Mass in (Kg)", &SimulatePhysics);
+                            ImGui::TableNextColumn(); ImGui::Text("Mass in (Kg)", &SimulatePhysics);
                             ImGui::TableNextColumn(); ImGui::DragFloat("", &PlaceholderPhysicsValue, 0.1f, -100, 100);
 
                             ImGui::TableNextRow(0, 20.0f);
@@ -1653,31 +1663,9 @@ void Display::DrawGUI()
 
 
             ImGui::Spacing();
-            ImGui::SetWindowFontScale(1.4f);
+            
 
-            ImGui::TextWrapped("Engine Info");
-            ImGui::SetWindowFontScale(1.0f);
-
-
-            ImGui::TextWrapped("Creative Engine V0.1");
-            ImGui::TextWrapped("Rendering API: DirectX12 Ultimate");
-            ImGui::TextWrapped("UI System: Dear ImGUI");
-            ImGui::TextWrapped("Developer: Morgan Ruffell");
-            ImGui::Spacing();
-
-            std::string DisplayTimeBetweenFrames = std::to_string(s_FrameTime);
-            const char* CharRepresentationA = DisplayTimeBetweenFrames.c_str();
-            ImGui::TextWrapped("Time Between Frames:");
-            ImGui::Text(CharRepresentationA);
-
-            std::string FrameRate = std::to_string(GetFrameRate());
-            const char* FrameRateRepresentation = FrameRate.c_str();
-            ImGui::TextWrapped("FPS:");
-            ImGui::Text(FrameRateRepresentation);
-
-
-
-
+ 
 
             ImGui::EndChild();
         }
@@ -1685,6 +1673,54 @@ void Display::DrawGUI()
         ImGui::End();
 
     }
+
+    ImGui::Begin("Stats", false, ImGuiWindowFlags_NoDecorationInvisible);
+    {
+        ImGui::SetWindowSize(StatsSize, ImGuiCond_Always);
+
+        ImGui::SetWindowFontScale(1.4f);
+
+        ImGui::TextWrapped("Engine Info");
+        ImGui::SetWindowFontScale(1.2f);
+
+        ImGui::TextWrapped("Rendering API: DirectX12 Ultimate");
+        ImGui::TextWrapped("UI System: Dear ImGUI");
+        ImGui::TextWrapped("Developer: Morgan Ruffell");
+        ImGui::Spacing();
+        ImGui::Spacing();
+
+        ImGui::SetWindowFontScale(1.3f);
+
+        std::string DisplayTimeBetweenFrames = std::to_string(ImGui::GetIO().DeltaTime);
+        const char* CharRepresentationA = DisplayTimeBetweenFrames.c_str();
+        ImGui::SameLine();
+        ImGui::TextWrapped("Deltatime :");
+
+        ImGui::SameLine();
+        ImGui::Text(CharRepresentationA);
+
+        std::string FrameRate = std::to_string(ImGui::GetIO().Framerate);
+        const char* FrameRateRepresentation = FrameRate.c_str();
+
+        ImGui::TextWrapped("  FPS :");
+
+
+        if (ImGui::GetIO().Framerate > 60.0f)
+        {
+            ImGui::SameLine();
+            ImGui::TextColored({ 0.0f, 1.0f, 0.0f, 1.0f }, FrameRateRepresentation);
+        }
+        else
+        {
+            ImGui::SameLine();
+            ImGui::TextColored({ 1.0f, 1.0f, 0.0f, 1.0f }, FrameRateRepresentation);
+
+        }
+
+        ImGui::SetWindowFontScale(1.0f);
+
+    }
+    ImGui::End();
 
     ImGui::Begin("File Browser", false, ImGuiWindowFlags_NoDecoration || ImGuiWindowFlags_NoBackground);
     {
