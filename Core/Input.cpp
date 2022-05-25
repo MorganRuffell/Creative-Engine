@@ -66,6 +66,8 @@ namespace
 
 #endif
 
+#ifdef USE_KEYBOARD_MOUSE
+
     static bool blockMouse = false;
     static bool blockKeyboard = false;
 
@@ -347,6 +349,7 @@ namespace
             s_Keyboard->GetDeviceState(sizeof(s_Keybuffer), s_Keybuffer);
         }
     }
+#endif
 
 
 }

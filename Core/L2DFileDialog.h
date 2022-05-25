@@ -96,7 +96,7 @@ namespace FileDialog {
             ImGui::Text("%s", file_dialog_current_path.c_str());
 
 
-            ImGui::BeginChild("Directories##1", ImVec2(280, 290), true, ImGuiWindowFlags_HorizontalScrollbar);
+            ImGui::BeginChild("Directories##1", ImVec2(280, 390), true, ImGuiWindowFlags_HorizontalScrollbar);
 
             if (ImGui::Selectable("..", false, ImGuiSelectableFlags_AllowDoubleClick, ImVec2(ImGui::GetContentRegionAvail().x, 0))) {
                 if (ImGui::IsMouseDoubleClicked(0)) {
@@ -113,6 +113,7 @@ namespace FileDialog {
                         ImGui::SetScrollHereY(0.0f);
                         file_dialog_current_folder = "";
                     }
+
                     else {
                         file_dialog_folder_select_index = i;
                         file_dialog_current_folder = folders[i].path().stem().string();
@@ -123,7 +124,7 @@ namespace FileDialog {
 
             ImGui::SameLine();
 
-            ImGui::BeginChild("Files##1", ImVec2(2100, 290), true, ImGuiWindowFlags_HorizontalScrollbar);
+            ImGui::BeginChild("Files##1", ImVec2(2100, 390), true, ImGuiWindowFlags_HorizontalScrollbar);
             ImGui::Columns(4);
             static float initial_spacing_column_0 = 400.0f;
             if (initial_spacing_column_0 > 0) {
@@ -215,6 +216,7 @@ namespace FileDialog {
             for (int i = 0; i < files.size(); ++i) {
 
                 if (ImGui::Selectable(files[i].path().filename().replace_extension("").string().c_str(), i == file_dialog_file_select_index, ImGuiSelectableFlags_AllowDoubleClick, ImVec2(ImGui::GetWindowContentRegionWidth(), 0))) {
+                   
                     file_dialog_file_select_index = i;
                     file_dialog_current_file = files[i].path().filename().string();
 
@@ -238,60 +240,7 @@ namespace FileDialog {
             }
             ImGui::EndChild();
 
-            std::string selected_file_path = file_dialog_current_path + (file_dialog_current_path.back() == '\\' ? "" : "\\") + (file_dialog_current_folder.size() > 0 ? file_dialog_current_folder : file_dialog_current_file);
-            char* buf = &selected_file_path[0];
-            ImGui::PushItemWidth(724);
-            ImGui::InputText("##text", buf, sizeof(buf), ImGuiInputTextFlags_ReadOnly);
 
-            ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 6);
-
-            if (ImGui::Button("New folder")) {
-                ImGui::OpenPopup("NewFolderPopup");
-            }
-            ImGui::SameLine();
-
-            static bool disable_delete_button = false;
-            disable_delete_button = (file_dialog_current_folder == "");
-            if (disable_delete_button) {
-                ImGui::PushItemFlag(ImGuiItemFlags_Disabled, true);
-                ImGui::PushStyleVar(ImGuiStyleVar_Alpha, ImGui::GetStyle().Alpha * 0.5f);
-            }
-            if (ImGui::Button("Delete folder")) {
-                ImGui::OpenPopup("DeleteFolderPopup");
-            }
-            if (disable_delete_button) {
-                ImGui::PopStyleVar();
-                ImGui::PopItemFlag();
-            }
-
-            ImVec2 center(ImGui::GetWindowPos().x + ImGui::GetWindowSize().x * 0.5f, ImGui::GetWindowPos().y + ImGui::GetWindowSize().y * 0.5f);
-            ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
-            if (ImGui::BeginPopup("NewFolderPopup", ImGuiWindowFlags_Modal)) {
-                ImGui::Text("Enter a name for the new folder");
-                static char new_folder_name[500] = "";
-                static char new_folder_error[500] = "";
-                ImGui::InputText("##newfolder", new_folder_name, sizeof(new_folder_name));
-                if (ImGui::Button("Create##1")) {
-                    if (strlen(new_folder_name) <= 0) {
-                        strcpy_s(new_folder_error, "Folder name can't be empty");
-                    }
-                    else {
-                        std::string new_file_path = file_dialog_current_path + (file_dialog_current_path.back() == '\\' ? "" : "\\") + new_folder_name;
-                        std::filesystem::create_directory(new_file_path);
-                        ImGui::CloseCurrentPopup();
-                    }
-                }
-                ImGui::SameLine();
-                if (ImGui::Button("Cancel##1")) {
-                    strcpy_s(new_folder_name, "");
-                    strcpy_s(new_folder_error, "");
-                    ImGui::CloseCurrentPopup();
-                }
-                ImGui::TextColored(ImColor(1.0f, 0.0f, 0.2f, 1.0f), new_folder_error);
-                ImGui::EndPopup();
-            }
-
-            ImGui::SetNextWindowPos(center, ImGuiCond_Appearing, ImVec2(0.5f, 0.5f));
             if (ImGui::BeginPopup("DeleteFolderPopup", ImGuiWindowFlags_Modal)) {
                 ImGui::TextColored(ImColor(1.0f, 0.0f, 0.2f, 1.0f), "Are you sure you want to delete this folder?");
                 ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 6);
@@ -350,6 +299,8 @@ namespace FileDialog {
                 ImGui::TextColored(ImColor(1.0f, 0.0f, 0.2f, 1.0f), file_dialog_error);
             }
 
+            
+            
         }
     }
 

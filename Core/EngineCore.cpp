@@ -103,7 +103,7 @@ namespace CECore
        /* RECT rc = { 0, 0, (LONG)g_DisplayWidth, (LONG)g_DisplayHeight };
         AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);*/
 
-        WNDCLASSEX _GraphicsWindow = { sizeof(WNDCLASSEX), CS_VREDRAW, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL,L"Creative Engine Viewport", NULL };
+        WNDCLASSEX _GraphicsWindow = { sizeof(WNDCLASSEX), CS_HREDRAW, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL,L"Creative Engine Viewport", NULL };
 
         //Might load icon
         _GraphicsWindow.hIconSm = LoadIcon(_GraphicsWindow.hInstance, MAKEINTRESOURCE(IDB_PNG1));

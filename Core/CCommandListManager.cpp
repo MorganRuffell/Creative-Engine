@@ -144,7 +144,7 @@ uint64_t CCommandQueue::ExecuteCommandList( ID3D12CommandList* List )
 
     m_CommandQueue->ExecuteCommandLists(1, &List);
 
-    m_CommandQueue->Signal(m_pFence, m_NextFenceValue);
+   m_CommandQueue->Signal(m_pFence, m_NextFenceValue);
     return m_NextFenceValue++;
 }
 
