@@ -382,6 +382,7 @@ void Display::InitGUI(const HWND& hwnd)
     if (g_Device->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&g_SRVDescHeap)) != S_OK)
         throw new std::exception;
 
+    //ImGuizmo::SetImGuiContext();
 
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX12_Init(g_Device, 3, DXGI_FORMAT_R10G10B10A2_UNORM, g_SRVDescHeap, g_SRVDescHeap->GetCPUDescriptorHandleForHeapStart(), g_SRVDescHeap->GetGPUDescriptorHandleForHeapStart());
@@ -405,6 +406,7 @@ void Display::UpdateUI()
 
     Display::DrawGUI();
     ImGui::Render();
+
 
     UINT l_backbufferindex = s_SwapChain->GetCurrentBackBufferIndex();
     NewCommandList->Close();
@@ -914,10 +916,14 @@ void Display::DrawGUI()
 
                     if (ImGui::BeginMenu("Features"))
                     {
-                        if (ImGui::RadioButton("SSAO (Screen Space Ambient Occlusion)", false)) {}
-                        if (ImGui::RadioButton("VSync", true)) {}
+                        bool IsActive = false;
+                        bool Other = true;
+
+
+                        if (ImGui::Checkbox("SSAO (Screen Space Ambient Occlusion)", false)) {}
+                        if (ImGui::Checkbox("VSync", &IsActive)) {}
                         if (ImGui::RadioButton("Raytracing", false)) {}
-                        if (ImGui::RadioButton("TAA (Temporaral Anti Aliasing)", true)) {}
+                        if (ImGui::Checkbox("TAA (Temporaral Anti Aliasing)", &Other)) {}
 
                         ImGui::EndMenu();
                     }
@@ -1689,6 +1695,7 @@ void Display::DrawGUI()
         ImGui::Spacing();
         ImGui::Spacing();
 
+
         ImGui::SetWindowFontScale(1.3f);
 
         std::string DisplayTimeBetweenFrames = std::to_string(ImGui::GetIO().DeltaTime);
@@ -1698,6 +1705,7 @@ void Display::DrawGUI()
 
         ImGui::SameLine();
         ImGui::Text(CharRepresentationA);
+
 
         std::string FrameRate = std::to_string(ImGui::GetIO().Framerate);
         const char* FrameRateRepresentation = FrameRate.c_str();
@@ -1852,6 +1860,23 @@ void Display::DrawGUI()
 
         ImGui::End();
     }
+
+    Display::UpdateGizmo();
+}
+
+void Display::UpdateGizmo()
+{
+    bool EnableCreativeGuizmo = true;
+
+    /*ImGui::Begin("Guizmo", false, ImGuiWindowFlags_NoDecorationInvisible);
+    {
+        ImGuizmo::Enable(EnableCreativeGuizmo);
+
+    }
+
+    ImGui::End();*/
+
+
 }
 
 static bool Display::LoadUITextureFromFile(const char* filename, D3D12_CPU_DESCRIPTOR_HANDLE srv_cpu_handle, ID3D12Resource** out_tex_resource, int* out_width, int* out_height)
@@ -2191,13 +2216,15 @@ void Display::Present(void)
     SetNativeResolution();
     SetDisplayResolution();
 
-
-    Display::UpdateUI();
-
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
+    ImGuizmo::BeginFrame();
+
 
     ImGui::NewFrame();
+
+    Display::UpdateUI();
+    
 }
 
 uint64_t CGraphics::GetFrameCount(void)

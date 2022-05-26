@@ -16,6 +16,8 @@ namespace Display
     void UpdateUI();
     void DrawGUI();
 
+    void UpdateGizmo();
+
 
     static bool LoadUITextureFromFile(const char* filename, D3D12_CPU_DESCRIPTOR_HANDLE srv_cpu_handle, ID3D12Resource** out_tex_resource, int* out_width, int* out_height);
 
