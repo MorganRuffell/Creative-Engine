@@ -19,6 +19,7 @@
 #include "ModelLoader.h"
 #include "ShadowCamera.h"
 
+
 #define SCENE_RENDERER
 
 using namespace CECore;

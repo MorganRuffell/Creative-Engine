@@ -64,7 +64,6 @@ namespace CGraphics
     CRGBBuffer g_DisplayPlane[SWAP_CHAIN_BUFFER_COUNT];
 
     IDXGISwapChain1* s_SwapChain1 = nullptr;
-
     IDXGISwapChain4* s_SwapChain = nullptr;
 
     void PreparePresentSDR();
@@ -226,6 +225,7 @@ void Display::Initialize(HWND window)
     Microsoft::WRL::ComPtr<IDXGIFactory4> dxgiFactory;
     ASSERT_SUCCEEDED(CreateDXGIFactory2(0, MY_IID_PPV_ARGS(&dxgiFactory)));
 
+
     DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {};
     swapChainDesc.Width = g_DisplayWidth;
     swapChainDesc.Height = g_DisplayHeight;
@@ -243,7 +243,7 @@ void Display::Initialize(HWND window)
     DXGI_SWAP_CHAIN_FULLSCREEN_DESC fsSwapChainDesc = {};
     fsSwapChainDesc.Windowed = TRUE;
     fsSwapChainDesc.RefreshRate.Denominator = 1;
-    fsSwapChainDesc.RefreshRate.Numerator = 60;
+    fsSwapChainDesc.RefreshRate.Numerator = 80;
     fsSwapChainDesc.Scaling = DXGI_MODE_SCALING_CENTERED;
     fsSwapChainDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_PROGRESSIVE;
 
@@ -405,6 +405,7 @@ void Display::UpdateUI()
     g_CommandManager.CreateNewCommandList(D3D12_COMMAND_LIST_TYPE_DIRECT, &NewCommandList, &NewCommandAllocator);
 
     Display::DrawGUI();
+    ImGui::EndFrame();
     ImGui::Render();
 
 
@@ -922,7 +923,7 @@ void Display::DrawGUI()
 
                         if (ImGui::Checkbox("SSAO (Screen Space Ambient Occlusion)", false)) {}
                         if (ImGui::Checkbox("VSync", &IsActive)) {}
-                        if (ImGui::RadioButton("Raytracing", false)) {}
+                        if (ImGui::Checkbox("Raytracing", false)) {}
                         if (ImGui::Checkbox("TAA (Temporaral Anti Aliasing)", &Other)) {}
 
                         ImGui::EndMenu();
@@ -2216,15 +2217,12 @@ void Display::Present(void)
     SetNativeResolution();
     SetDisplayResolution();
 
-    ImGui_ImplDX12_NewFrame();
-    ImGui_ImplWin32_NewFrame();
-    ImGuizmo::BeginFrame();
-
-
-    ImGui::NewFrame();
+  
 
     Display::UpdateUI();
-    
+    ImGui_ImplDX12_NewFrame();
+    ImGui_ImplWin32_NewFrame();
+    ImGui::NewFrame();
 }
 
 uint64_t CGraphics::GetFrameCount(void)

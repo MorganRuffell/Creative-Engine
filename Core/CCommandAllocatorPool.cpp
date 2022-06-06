@@ -34,7 +34,8 @@ ID3D12CommandAllocator * CCommandAllocatorPool::RequestAllocator(uint64_t Comple
     //We lock the context with a mutex -- You have to rememeber that GPUs are going to work concurrently
     //this means that we have to use a mutex to lock an index of a function -- I'm using a std::lockguard which automatically
     //Unlocks when it leaves the method context
-    //std::lock_guard<std::mutex> LockGuard(m_AllocatorMutex);
+
+    std::lock_guard<std::mutex> LockGuard(m_AllocatorMutex);
 
     ID3D12CommandAllocator* pAllocator = nullptr;
 

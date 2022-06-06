@@ -32,9 +32,9 @@ namespace
 
 #ifdef USE_KEYBOARD_MOUSE
 
-    IDirectInput8A* s_DI;
-    IDirectInputDevice8A* s_Keyboard;
-    IDirectInputDevice8A* s_Mouse;
+    IDirectInput8W* s_DI;
+    IDirectInputDevice8W * s_Keyboard;
+    IDirectInputDevice8W * s_Mouse;
 
     DIMOUSESTATE2 s_MouseState;
     
@@ -62,9 +62,6 @@ namespace
     }
 
 
-#ifdef USE_KEYBOARD_MOUSE
-
-#endif
 
 #ifdef USE_KEYBOARD_MOUSE
 
@@ -109,12 +106,12 @@ namespace
             if (blockMouse)
             {
                 ((LPDIMOUSESTATE)lpvData)->rgbButtons[0] = 0;
-                ((LPDIMOUSESTATE)lpvData)->rgbButtons[1] = 0;
+                ((LPDIMOUSESTATE)lpvData)->rgbButtons[1] = 1;
             }
 
         }
         
-
+        return result;
     };
 
     typedef HRESULT(__stdcall* GetDeviceDataT)(IDirectInputDevice8* pThis, DWORD cbObjectData, LPDIDEVICEOBJECTDATA rbdod, LPDWORD pdwInOut, DWORD dwFlags);
@@ -345,6 +342,9 @@ namespace
         {
             s_Mouse->Acquire();
             s_Mouse->GetDeviceState(sizeof(DIMOUSESTATE2), &s_MouseState);
+
+            //hookGetDeviceState(s_Mouse, sizeof(DIMOUSESTATE2), &s_MouseState);
+
             s_Keyboard->Acquire();
             s_Keyboard->GetDeviceState(sizeof(s_Keybuffer), s_Keybuffer);
         }
@@ -449,8 +449,6 @@ void EngineInput::Update( float frameDelta )
     }
 
     
-
-
 #endif
 
     
